@@ -3,7 +3,8 @@
 
 	import ContentItem from './content-item.svelte';
 
-	export let articlesContent: Content[];
+	export let contentItems: Content[];
+	export let title:string;
 	export let topic: string;
 	$: handleTitleColor = () => {
 		if (topic === 'react') return 'c-sky-400';
@@ -13,12 +14,12 @@
 	};
 </script>
 
-<h2 class="xl:p-0 pl-2 {handleTitleColor() }">Artículos</h2>
-
+<h2 class="xl:p-0 pl-2 {handleTitleColor() }">{title}</h2>
 <article
 	class="h-full w-full flex flex-col justify-center items-center  max-w-xl  gap-12    mt-12 mb-6   xl:p-0 p-2"
+
 >
-	{#each articlesContent as content}
+	{#each contentItems as content}
 		<ContentItem {content} />
 	{/each}
 </article>
