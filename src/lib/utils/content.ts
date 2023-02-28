@@ -7,6 +7,7 @@ export type Content = {
 	type?: Type;
 	topic: Topic;
 	author: string;
+	twitterMediaLink: string;
 };
 export const getContent = (): Content[] => [
 	{
@@ -16,7 +17,8 @@ export const getContent = (): Content[] => [
 		description:
 			'Este canal contiene vários tópicos, así que prefiero no englobarlo en uno solo. Ryan Carniato es el creador del framework SolidJS, y en su canal de youtube se resuben los streams que realiza acerca de distíntos tópicos de la web. A mi opinión, un MUST si quieres profundizar en tópicos como JSX, reactividad, etc.',
 		topic: 'web-development',
-		href: 'https://www.youtube.com/@ryansolid'
+		href: 'https://www.youtube.com/@ryansolid',
+		twitterMediaLink: 'https://twitter.com/RyanCarniato'
 	},
 	{
 		title: 'Midudev',
@@ -25,7 +27,8 @@ export const getContent = (): Content[] => [
 		description:
 			'Si a día de hoy, estás metido en desarrollo web, y nunca escuchaste hablar de Midudev, vamos por mal camino (Mentira, aunque me parecería rarísimo). Su contenido es TOP en lo que se refiere a material gratuito. un MUST total.',
 		topic: 'react',
-		href: 'https://www.youtube.com/@midudev'
+		href: 'https://www.youtube.com/@midudev',
+		twitterMediaLink: 'https://twitter.com/midudev'
 	},
 	{
 		title: 'El blog de KCD',
@@ -34,7 +37,8 @@ export const getContent = (): Content[] => [
 		description:
 			'Contiene bastante información en profundidad sobre React, Node, Remix, testing y demás temas relacionados a desarrollo web. A mi parecer, un MUST.',
 		topic: 'react',
-		href: 'https://kentcdodds.com/'
+		href: 'https://kentcdodds.com/',
+		twitterMediaLink: 'https://twitter.com/kentcdodds'
 	},
 	{
 		title: 'El blog de Sergio Xalambrí',
@@ -43,7 +47,8 @@ export const getContent = (): Content[] => [
 		description:
 			'El blog de Sergio Xalambri contiene bastante información acerca de Remix, uno de los frameworks de React. Te va a interesar si estás trabajando con ello.',
 		topic: 'react',
-		href: 'https://sergiodxa.com/'
+		href: 'https://sergiodxa.com/',
+		twitterMediaLink: 'https://twitter.com/sergiodxa'
 	},
 	{
 		title: 'El blog de TK Todo',
@@ -52,7 +57,8 @@ export const getContent = (): Content[] => [
 		description:
 			'Este blog contiene bastante información acerca de React, React Query (Librería de data-fetching y manejo del  caché, update del server-state. Resumidamente, todo lo que faltaría en React.) A mi parecer, otro MUST.',
 		topic: 'react',
-		href: 'https://tkdodo.eu/blog/'
+		href: 'https://tkdodo.eu/blog/',
+		twitterMediaLink: 'https://twitter.com/TkDodo'
 	},
 	{
 		title: 'El blog de Anthony Fu',
@@ -61,7 +67,8 @@ export const getContent = (): Content[] => [
 		description:
 			'Antony Fu es uno de los core member de VueJS, Vite, Nuxt, además de ser el creador de Unocss, VueUse, Vitest, Slidev y Elk, además de vários proyectos Open Source. Si estás interesado en Vue y en CSS, recomiendo fuertemente leer su post. ',
 		topic: 'vue',
-		href: 'https://antfu.me/'
+		href: 'https://antfu.me/',
+		twitterMediaLink: 'https://twitter.com/antfu7'
 	},
 	{
 		title: 'Huntabyte',
@@ -70,6 +77,7 @@ export const getContent = (): Content[] => [
 		description:
 			'Contiene información acerca de Sveltekit. Muy buen contenido si estás interesado en Svelte.',
 		topic: 'svelte',
-		href: 'https://www.youtube.com/@Huntabyte/'
+		href: 'https://www.youtube.com/@Huntabyte/',
+		twitterMediaLink: 'https://twitter.com/huntabyte'
 	}
 ];
