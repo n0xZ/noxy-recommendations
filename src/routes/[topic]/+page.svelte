@@ -2,9 +2,9 @@
 	import type { PageData } from './$types';
 	import { page } from '$app/stores';
 
-	import VideosRecommendation from '$lib/components/videos-recommendation.svelte';
-	import BlogRecommendations from '$lib/components/blog-recommendations.svelte';
-	import ArticleRecommendations from '$lib/components/article-recommendations.svelte';
+
+	import ContentList from '$lib/components/content-list.svelte';
+
 
 	export let data: PageData;
 	$: actualTopic = $page.params.topic;
@@ -26,16 +26,16 @@
 	class="h-full w-full prose prose-lg container mx-auto max-w-xl mt-10"
 	
 >
-	<h1 class="text-center">
+	<h1 class="text-center ">
 		Contenido sobre: <span class={handleTitleColor()}>{actualTopic.toUpperCase()}</span>
 	</h1>
 	{#if contentByVideo.length}
-		<VideosRecommendation  videosContent={contentByVideo} topic={actualTopic} />
+		<ContentList  contentItems={contentByVideo} topic={actualTopic} title="Videos" />
 	{/if}
 	{#if contentByBlogs.length}
-		<BlogRecommendations blogsContent={contentByBlogs} topic={actualTopic} />
+		<ContentList contentItems={contentByBlogs} topic={actualTopic} title="Blogs" />
 	{/if}
 	{#if contentByArticles.length}
-		<ArticleRecommendations articlesContent={contentByArticles} topic={actualTopic} />
+		<ContentList contentItems={contentByArticles} topic={actualTopic} title="Artículos" />
 	{/if}
 </main>
