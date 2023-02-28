@@ -11,14 +11,26 @@
 	$: contentByVideo = data.filteredContentByTopic.filter((item) => item.type === 'video');
 	$: contentByBlogs = data.filteredContentByTopic.filter((item) => item.type === 'blog');
 	$: contentByArticles = data.filteredContentByTopic.filter((item) => item.type === 'article');
+	$: handleTitleColor = () => {
+		if (actualTopic === 'react') return 'c-sky-400';
+		if (actualTopic === 'vue') return 'c-emerald-400';
+		if (actualTopic === 'svelte') return 'c-orange-400';
+		return 'c-neutral-50';
+	};
 </script>
 
 <svelte:head>
 	<title>Noxy - Recommendations | {$page.params.topic.toUpperCase()}</title>
 </svelte:head>
-<main class="h-full w-full prose prose-lg container mx-auto max-w-xl">
+<main
+	class="h-full w-full prose prose-lg container mx-auto max-w-xl mt-10"
+	
+>
+	<h1 class="text-center">
+		Contenido sobre: <span class={handleTitleColor()}>{actualTopic.toUpperCase()}</span>
+	</h1>
 	{#if contentByVideo.length}
-		<VideosRecommendation videosContent={contentByVideo} topic={actualTopic} />
+		<VideosRecommendation  videosContent={contentByVideo} topic={actualTopic} />
 	{/if}
 	{#if contentByBlogs.length}
 		<BlogRecommendations blogsContent={contentByBlogs} topic={actualTopic} />
