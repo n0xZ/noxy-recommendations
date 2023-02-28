@@ -2,7 +2,7 @@
 	export let href: string;
 </script>
 
-<a href="">
+<a {href}  target="_blank"rel="noreferrer">
 	<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="h-8 w-8"
 		><path
 			fill="none"
