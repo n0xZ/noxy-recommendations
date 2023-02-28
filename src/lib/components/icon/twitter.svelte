@@ -1,8 +1,9 @@
 <script lang="ts">
 	export let href: string;
+	export let author: string;
 </script>
 
-<a {href}  target="_blank"rel="noreferrer">
+<a {href} target="_blank" rel="noreferrer" title="Ver cuenta de twitter de {author}">
 	<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="h-8 w-8"
 		><path
 			fill="none"
