@@ -13,7 +13,7 @@
 	};
 </script>
 
-<h2 class={handleTitleColor()}>Artículos</h2>
+<h2 class="xl:p-0 pl-2 {handleTitleColor() }">Artículos</h2>
 
 <article
 	class="h-full w-full flex flex-col justify-center items-center  max-w-xl  gap-12    mt-12 mb-6   xl:p-0 p-2"
