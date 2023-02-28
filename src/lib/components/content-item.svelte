@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Content } from '$lib/utils/content';
-
+	import IconLink from './icon/link.svelte';
+	import Twitterlink from './icon/twitter.svelte';
 	export let content: Content;
 
 	$: handleShadowGradientColor = () => {
@@ -19,9 +20,12 @@
 
 <aside class=" h-96 prose prose-lg   rounded-lg border-l-2 {handleShadowGradientColor()}     pl-5">
 	<h3 class="{handleTitleColor()} ">{content.title}</h3>
-	{#if content.type!=="video"}
+	{#if content.type !== 'video'}
 		<h4>{content.author}</h4>
 	{/if}
 	<p class="c-neutral-400">{content.description}</p>
-	<a href={content.href} target="_blank" rel="noreferrer">Ver contenido</a>
+	<div class="w-full flex flex-row items-center justify-center space-x-7 mt-6">
+		<IconLink href={content.href} author={content.author} />
+		<Twitterlink href={content.twitterMediaLink}  author={content.author} />
+	</div>
 </aside>
