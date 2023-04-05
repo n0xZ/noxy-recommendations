@@ -14,7 +14,7 @@ export const load: Load = async ({ params, fetch }) => {
 		})
 	);
 	const filteredContentByTopic = contentFromSheets.filter((item) => item.topic === params.topic);
-	console.log(filteredContentByTopic);
+
 	if (!filteredContentByTopic.length) throw redirect(302, '/');
 	return { filteredContentByTopic };
 };
